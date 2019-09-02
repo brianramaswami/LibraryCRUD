@@ -6,7 +6,7 @@
 // =============================================================
 const express = require("express");
 const bodyParser = require("body-parser");
-const db = require("./models");
+// const db = require("./models");
 
 
 // Sets up the Express App
@@ -26,16 +26,16 @@ app.use(express.static("./public"));
 
 // Routes
 // =============================================================
-require("./routes/api-routes.js")(app);
+// require("./routes/api-routes.js")(app);
 require("./routes/html-routes.js")(app);
 
 
 // Starts the server to begin listening
 // =============================================================
 
-db.sequelize.sync({ force: true }).then(function() {
+// db.sequelize.sync({ force: true }).then(function() {
   app.listen(PORT, function() {
     console.log("App listening on PORT " + PORT);
   });
-});
+// });
 
